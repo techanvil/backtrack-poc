@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const { Validator, ValidationError } = require('express-json-validator-middleware');
 
@@ -11,6 +12,7 @@ const eventMiddleware = (req, res, next) => {
 }
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 app.use(eventMiddleware);
 
