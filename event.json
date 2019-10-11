@@ -1,0 +1,21 @@
+{
+  "event": {
+    "number":1, "name":"value2", "type":"Ninja"
+  },
+  "schema": {
+    "type": "object",
+    "required": ["number", "name", "type"],
+    "properties": {
+      "number": {
+        "type": "number"
+      },
+      "name": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string",
+        "enum": ["Window", "Widget", "Ninja"]
+      }
+    }
+  }
+}
